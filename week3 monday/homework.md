@@ -89,7 +89,7 @@ DELETE FROM movies WHERE title='Batman Begins';
 INSERT INTO people (name) VALUES ('Big Tony');
 
 
-6. Sadly, Graeme has hurt himself and wont be able to make it, Delete his entry from the 'people' table
+6. Sadly, Graeme has hurt himself and won't be able to make it, Delete his entry from the 'people' table
 
 DELETE FROM people WHERE name='Graeme Bell';
 
