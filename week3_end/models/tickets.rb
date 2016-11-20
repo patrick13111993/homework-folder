@@ -34,4 +34,11 @@ class Ticket
   def delete()
     SqlRunner.run("DELETE FROM tickets WHERE id = #{id};")
   end
+
+  def buy_ticket(customer, film)
+    funds = customer.funds
+    price = film.price
+    customer.funds = (funds - price).to_f
+    customer.update()
+  end
 end

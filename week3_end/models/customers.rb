@@ -34,4 +34,11 @@ class Customer
   def delete()
     SqlRunner.run("DELETE FROM customers WHERE id = #{id};")
   end
+
+  def tickets()
+      result = SqlRunner.run("SELECT * FROM tickets WHERE customer_id = #{@id};")
+      binding.pry
+      ticket = Ticket.new(result[0])
+      return ticket
+    end
 end
