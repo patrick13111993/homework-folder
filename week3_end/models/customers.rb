@@ -37,7 +37,6 @@ class Customer
 
   def tickets()
       result = SqlRunner.run("SELECT * FROM tickets WHERE customer_id = #{@id};")
-      binding.pry
       ticket = Ticket.new(result[0])
       return ticket
     end
